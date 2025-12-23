@@ -1,0 +1,57 @@
+ MAVEN :                      Build automation        &        Project Management 
+                                  |                                     |
+            It helps Complie & Package JAVA Project                It helps in dependencies Management 
+
+why Maven ?
+
+   Usually used for the JAVA projects, we need upto date version of External dependencies 
+
+HEART OF MAVEN :  pom file
+
+  Maven will automatically download the new dependies, paths, everything will be take care by maven itself , known as Project Management tool
+
+  Maven is used to 
+                    RUN test
+                     Create JAR / WAR file
+                     Using plugin can check security vunerability
+
+Download URL :  maven.apache2.org
+               bin-> mvn [ env -> env -> system variable -> new MAVEN HOME -> path paste
+                         path -> new -> paste path
+  check
+    CMD: mvn --version
+---------------------------------------
+              structure:
+---------------------------------------
+   
+   application
+   |
+   |-pom                 # project object Model
+   |-SRC
+       |-main 
+       |      |-JAVA           # JAVA Source Code
+       |      |-resource       # Config file
+       |      |-webapps        # webapps
+       |
+       |-test
+            |-JAVA             # Unit Test'S
+            |-resource
+            |-NIT
+            
+-------------------------------------------------      
+
+  Local Repo:    Stored on your computer
+Central Repo:  default Global repo
+ remote Repo:   own created repo for organaization [ prvt repo ]
+
+
+
+
+
+
+
+
+
+
+
+     
