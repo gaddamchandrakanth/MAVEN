@@ -44,6 +44,83 @@ Download URL :  maven.apache2.org
 Central Repo:  default Global repo
  remote Repo:   own created repo for organaization [ prvt repo ]
 
+CENTRAL REPO
+
+Command:  mvn archetype:generate "-Dfilter=org.apache.maven.archetypes:"
+
+maven Cordinate [ GAV ]
+   group ID:        domain name.mavne [   ex: abc.com but enter as com.abc.maven ]
+Artifact ID:
+    Version:         default
+    Package:         default
+
+----NOW ARTIFACT CLONED AND MAVEN PROJECT CREATED-----
+
+WHAT WE HAVE POM file ?
+
+             properties
+Dependencies Management
+                  Build        [ plugin we have to execute specific ]   
+ 
+  # Each phase of project actually execute by maven's Own plugin
+  # Add fuctionality to project  # maven Compiler plugin       - java
+                                 # surefire plugin             - RUN unit test
+                                 # maven-jar-plugin            - package jar file
+
+
+COMMAND's :
+              mvn compile
+              mvn test
+              mvn clean
+              mvn package
+              mvn install
+---------------------------------------
+
+
+1. MVN COMPILE:   compil#e mvn project
+                     here target file get's created, which have  
+
+                                            Target
+                                                  |
+                                                  |- classes 
+                                                  |         |-app.class
+                                                  |         
+                                                  |-generated-source
+                                                  |-maven-stables
+ 2. MVN TEST:   
+          |-surefire-reports
+                           |-Test File ------ { can see the file here }
+
+3. MVN CLEAN:  
+         will delete everything got above 
+
+4. MVN PACKAGE:
+         ---do gain mvn compile------
+           here JAR file get created { inside target folder }
+
+5. MVN INSTALL:
+            ---do gain mvn clean & mvn compile------        # by this evrthing get'S cleaned
+        Here the snapshot will get created in local repo 
+      .M2 -> repo
+
+sequence:
+              mvn clean
+              mvn Compile
+              mvn Test
+              mvn package
+              mvn install
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
