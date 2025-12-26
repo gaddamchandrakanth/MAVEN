@@ -105,9 +105,9 @@ COMMAND's :
 
 sequence:
               mvn clean      :  Deletes the target folder to start a fresh build.
-              mvn Compile    :  Compiles the main source code (src/main/java) into .class files.
-              mvn Test       :  Compiles and runs unit tests from src/test/java.
-              mvn package    :  Compiles code, runs tests, and packages the project into a JAR or WAR.
+              mvn Compile    :  Compiles the main source code into .class files.
+              mvn Test       :  compiles and runs test .classfiles
+              mvn package    :  Compiles source code, runs tests on .classfile , and packages the project into a JAR or WAR.
               mvn install    :  Packages the project and installs it into the local Maven repository for reuse by other projects
 
 
