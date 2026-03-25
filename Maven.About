@@ -12,8 +12,9 @@ once dev give the pom.xml file :
                                  uisng     properties        &      dependencies                      we create the artifact 
                                                |                         |
                                          java version               [ group ID ,artifact ID ] 
- -----------------------------------------------------------------------------------------------------------------------------------------------  
-
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+*very important*
+---------------
 
 mvn validate          : check all neccessary files are there present.
 mvn complie           : above all execute & check for  syntax based error. [  if no errror : success ] 
@@ -21,9 +22,8 @@ mvn test              : above all execute & run test cases [ check any bugs or i
 mvn package           : above all execute & artfifact will be created 
 mvn install           : above all execute & store the artifact in target folder & local repo [ PC: .m2/repo { because can also use this for another project 
                                                                                                                                which need same dependencies] 
-mvn Deploy            :  above all execute & generated artfact .jar will be storing in remote repo like artifactory/nexsus
-
------------------------------------------------------------------------------------------------------------------------------------------------
+mvn Deploy            :  above all execute & generated artfact .jar will be storing in remote repo like artifactory/nexsus [ it's a repo storing artifacts like github ]
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
