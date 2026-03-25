@@ -1,4 +1,14 @@
- MAVEN :                      Build automation        &        Project Management 
+once dev give the pom.xml file : 
+                                 uisng   properties            & dependencies                      we create the artifact 
+                                             |                          |
+                                         java version               [ group ID ,artifact ID ] 
+    
+
+
+
+
+
+MAVEN :                      Build automation        &        Project Management 
                                   |                                     |
             It helps Complie & Package JAVA Project                It helps in dependencies Management 
 
