@@ -1,3 +1,13 @@
+interview:  
+           once i received the application ocde form the DEV , I do        MVN TEST  ---/ run test cases to check any bugs [ fails or pass ] 
+                                                                   MVN CLEAN INSTALL ---/ here the old data will be removed only in the target folder and new .jar 
+                                                                                          file will be created.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+work:
+     mvn test
+     mvn clean install
+-----------------------------------------------------------------------------------
+
 once dev give the pom.xml file : 
                                  uisng   properties            & dependencies                      we create the artifact 
                                              |                          |
