@@ -129,8 +129,17 @@ sequence:
               mvn Test       :  compiles and runs test .classfiles
               mvn package    :  Compiles source code, runs tests on .classfile , and packages the project into a JAR or WAR.
               mvn install    :  Packages the project and installs it into the local Maven repository for reuse by other projects
+              mvn validate   :  validate / check weater all neccesary files in project present.   [ 1st check pom file is there or not  ]
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
+mvn validate : check all neccessary files are there present.
+mvn complie  : above all execute & check for  syntax based error. [  if no errror : success ] 
+mvn test     : above all execute & run test cases [ check any bugs or issue in code ] 
+mvn package  : above all execute & artfifact will be created 
+mvn install  : above all execute & store the artifact in target folder & local repo [ PC: .m2/repo { because can also use this for another project 
+                                                                                                                               which need same dependencies] 
+mvn Deploy   :  above all execute & generated artfact .jar will be storing in remote repo like artifactory/nexsus
 
 
 
