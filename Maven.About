@@ -17,10 +17,10 @@ once dev give the pom.xml file :
 ---------------
 
 mvn validate          : check all neccessary files are there present.
-mvn complie           : above all execute & check for  syntax based error. [  if no errror : success ] 
-mvn test              : above all execute & run test cases [ check any bugs or issue in code ] 
-mvn package           : above all execute & artfifact will be created 
-mvn install           : above all execute & store the artifact in target folder & local repo [ PC: .m2/repo { because can also use this for another project 
+mvn complie           : above all execute & convert .java [human readable] --> .class [machine readable ] & also check for  syntax error ✅
+mvn test              :  "  &  run test cases [ check any bugs in code & see expected output is getting as written in code ] 
+mvn package           :  "  &  artfifact will be created 
+mvn install           :  "  &  store the artifact in target folder & local repo [ PC: .m2/repo { because can also use this for another project 
                                                                                                                                which need same dependencies] 
 mvn Deploy            :  above all execute & generated artfact .jar will be storing in remote repo like artifactory/nexsus [ it's a repo storing artifacts like github ]
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -95,15 +95,19 @@ Dependencies Management
   # Add fuctionality to project  # maven Compiler plugin       - java
                                  # surefire plugin             - RUN unit test
                                  # maven-jar-plugin            - package jar file
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+✅sequence:
+              
+                mvn validate :   checks if all necessary files and project structure are present.
+                mvn compile  :   checks for syntax errors and converts aplication code .java ( human readable )  →   .class ( machinereadable )
+                mvn test     :   runs test cases to find bugs and verify that the output is as expected.                |
+                mvn package  :   create Artifact from .class file                 < ------------------------------------|
+                mvn install  :   stores the artifact in both the target/ folder and PC : local Maven repository (.m2/repository).
+    
+can artifact in remote repo like github :-          
 
-
-COMMAND's :
-              mvn compile
-              mvn test
-              mvn clean
-              mvn package
-              mvn install
----------------------------------------
+                mvn deploy    :  sends the artifact to a remote repository (like Nexus or Artifactory) so it can be shared.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 1. MVN COMPILE:   compil#e mvn project
@@ -120,23 +124,51 @@ COMMAND's :
           |-surefire-reports
                            |-Test File ------ { can see the file here }
 
-3. MVN CLEAN:  
-         will delete everything got above 
-
-4. MVN PACKAGE:
-         ---do gain mvn compile------
-           here JAR file get created { inside target folder }
-
-5. MVN INSTALL:
-            ---do gain mvn clean & mvn compile------        # by this evrthing get'S cleaned
-        Here the snapshot will get created in local repo 
-      .M2 -> repo
-
 ------------------------------------------------------------------------------------------------------------------------------------------------
+what contain in the pom.xml file ?
 
+dependencis
+plugins
+project information :
+                           Group ID   :  company name 
+                        Artifact ID   :  project name  
+                            Version   :  project version (e.g., 1.0.0)
+                               Name   :  readable project name
+                        Description   :  what the project does
+   
+-----------------------------------------------------------------------------------------------------------------------------------------------
+WORK WE DO ONCE THE dev GIVE FILES ?
+----------------------------------------------------------------------------------------
+1. create an server
+2. clone application code repo 
+3. cd project_name
+4. ls [ pom.xml src two files will be ]
 
+5. MVN Validate ( check all required files are there or not )
+   MVN Compile  (above will do again and now check any syntax error )
 
+   ls
+   target/  { classes generated-sources maven-status }
+   cd ..
+   
+6. MVN Test ( Run test cases)
+   MVN package (create artifact with dependency)
+   
+   ls
+   ( artifact-generated )
 
+7. MVN install  ( make sure pom.xml file is here ) 
+
+---------------------------------------------------------------------------------------------------
+
+   
+
+ note:
+       now if give MVN clean everything will be gone [ like target folder where artifact will be there ]
+                   MVN clean package again artifact will come by deleting old data which as in the target folder 
+
+      
+     
 
 
 
